@@ -106,7 +106,8 @@ if __name__ == '__main__':
         quiet_args = ''
         if args.quiet:
             quiet_args = ' -Q'
-        cmd = "ascp{} -T -l 300m -P33001 {} -i {} era-fasp@fasp.sra.ebi.ac.uk:{} {}".format(
+        #cmd = "ascp{} -T -l 300m -P33001 {} -i {} era-fasp@fasp.sra.ebi.ac.uk:{} {}".format(
+        cmd = "ascp{} -k2 -T -l 5m -P33001 {} -i {} era-fasp@fasp.sra.ebi.ac.uk:{} {}".format(
             quiet_args,
             args.ascp_args,
             ssh_key_file,
